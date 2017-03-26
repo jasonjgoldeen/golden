@@ -5,12 +5,17 @@ section {
   height: 100vh;
   background-size: cover;
   text-align: center;
-  padding: 1em;
+  /*padding: 7em 9em 0;*/
+}
+div {
+  position: relative;
+  top: 47%;
+  transform: translateY(-50%);
 }
 #gold {
   background-image: url(img/gold.png);
   color: #fff;
-  padding: 3em;
+  padding: 2em 4em;
 }
 #sf {
   background-image: url(img/san-francisco.png);
@@ -28,32 +33,87 @@ section {
 }
 #ggate {
   background-image: url(img/ggate.png);
+  padding: 4em;
+  height: 100%;
+}
+header {
+  text-transform: uppercase;
 }
 
 #logo {
   float: left;
+  border-bottom: #fff solid 4px;
+  letter-spacing: 5px;
+  font-size: 35px;
 }
 nav {
   float: right;
+  letter-spacing: 3px;
+  font-size: 20px;
+  margin-top: 1em;
 }
 nav > a {
   text-decoration: none;
   color: #fff;
-  margin: 3em;
+  margin: 1em;
+}
+.tk-didoni-urw {
+  font-size: 4.5em;
+  margin-bottom: 0.25em;
+  letter-spacing: 2px;
+  width: 60%;
+  margin: 0 auto;
+  font-weight: 200;
+}
+#redwood .tk-didoni-urw {
+  width: 70%;
+}
+.tk-din-condensed {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2em;
+  margin: 20px;
+}
+main#snowList .tk-din-condensed {
+  margin: 25px;
+  font-size: 1.5em;
+}
+.tk-adage-script-jf {
+  font-size: 4em;
+  margin: 0;
+}
+#gold > h1 {
+  font-size: 6vw;
+  width: 70%;
+  /*margin: 15% auto 0;*/
+  letter-spacing: 3px;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  font-weight: 200;
 }
 .clearfix {
   content: none;
   clear: both;
 }
 main {
-  border-top: 5px solid;
-  border-bottom: 5px solid;
+  border-top: 4px solid;
+  border-bottom: 4px solid;
   width: 60%;
   margin: 10px auto;
 }
 p {
-  width: 70%;
-  margin: 5px auto;
+  width: 60%;
+  margin: 20px auto;
+  font-weight: 900;
+  line-height: 1.5em;
+}
+section .displayCouldChange {
+  display: block;
+}
+#gold .displayCouldChange,
+#sf .displayCouldChange {
+  display: inline;
 }
 #snowList {
   border-bottom: none;
@@ -68,8 +128,77 @@ input, textarea {
   border: none;
   line-height: 2em;
 }
-button {
+form > .tk-din-condensed {
+  letter-spacing: 0;
+  line-height: 1em;
+  font-size: 1em;
+  text-transform: none;
+  padding: 10px;
+  margin: 15px auto;
+}
+form > button.tk-din-condensed {
+  text-transform: uppercase;
   background-color: #000;
   color: #fff;
   border: none;
+  padding: 10px 40px;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  font-size: 1.25em;
+}
+form {
+  margin: 20px;
+}
+
+/*media queries for web responsiveness*/
+/*Tablets and mobile phone:*/
+@media screen and (max-width: 992px) {
+  nav {
+    display: none;
+  }
+  #logo {
+  float: none;
+  }
+  main,
+  section .tk-didoni-urw,
+  #redwood .tk-didoni-urw {
+    width: 85%;
+  }
+  #gold .displayCouldChange,
+  .displayCouldChange {
+    display: block;
+  }
+  p {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #gold > h1 {
+    width: 60%;
+    font-size: 5.5em;
+  }
+  #redwood .displayCouldChange,
+  #ggate .displayCouldChange {
+    display: inline;
+  }
+  #hills .displayCouldChange,
+  #sf .displayCouldChange {
+    display: block;
+  }
+  main .tk-din-condensed {
+    letter-spacing: 5px;
+  }
+  #hills h1 {
+    width: 90%;
+  }
+  #ggate {
+    padding: 4em 0;
+  }
+  form .tk-din-condensed {
+    font-size: 2em;
+    width: 80%;
+  }
+  form > button.tk-din-condensed {
+    width: 60%;
+  }
 }
